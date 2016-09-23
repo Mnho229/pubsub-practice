@@ -8,8 +8,11 @@
         <body>
             <div>
                 <div id="input-box" class="box">
+                    <p>Type in a number or a word</p>
+                    <input type="text" name="inbox" id="inbox">
                 </div>
                 <div id="type-detection-box" class="box">
+                    <p id="announce-type"></p>
                 </div>
                 <div id="examples-box" class="box">
                 </div>
@@ -26,4 +29,6 @@
             </div>
         </body>
         <script src="pubsub.js"></script>
+        <script src="box_modules/input-box.js"></script>
+        <script src="box_modules/type-detect.js"></script>
     </html>
