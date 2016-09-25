@@ -14,12 +14,12 @@ var type_detect = (function() {
         if ( isNaN(Number(input)) )
         {
             boxText.innerHTML = "This is a String!";
-            events.emit("stringFound", Number(input));
+            events.emit("stringFound", input);
         }
         else
         {
             boxText.innerHTML = "This is a Number!";
-            events.emit("numberFound", input);
+            events.emit("numberFound", Number(input));
         }
     }
 
