@@ -10,3 +10,8 @@
     vertical-align: top;
     margin-bottom: 5px;
 }
+
+.highlight {
+    border-top: 6px solid rgba(0,255,0,0);
+    border-bottom: 6px solid rgba(0,255,0,0);
+}

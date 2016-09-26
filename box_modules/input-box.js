@@ -14,4 +14,7 @@ var input_box = (function() {
 
     });
 
+    //marked for highlighting always
+    highlight_box.mark("input-box", false);
+
 })();

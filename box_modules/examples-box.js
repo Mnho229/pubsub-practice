@@ -16,4 +16,8 @@ var examples_box = (function() {
         examplesText.innerHTML = "1, 400, 5, 347, 10101";
     }
 
+
+    //marked for highlighting always
+    highlight_box.mark("examples-box", false);
+    
 })();

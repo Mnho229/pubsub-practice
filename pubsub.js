@@ -22,7 +22,7 @@ var events = {
         fn(data);
       });
     }
-  }
+  },
 };
 
 //thanks to learncodeacademy for this pubsub!

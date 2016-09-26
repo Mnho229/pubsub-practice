@@ -10,10 +10,12 @@ var operations_box = (function() {
     function operations_compute(value) {
         var sum = value + 324;
         operationsText.innerHTML = "The sum of " + value + " and 324 is " + sum;
+        highlight_box.mark("operations-box", false);
     }
 
     function operations_clear(word) {
         operationsText.innerHTML = word + " ain't no number, fool.";
+        highlight_box.mark("operations-box", true);
     }
 
 })();
