@@ -11,26 +11,35 @@
                     <input type="text" name="inbox" id="inbox">
                 </div>
                 <div id="type-detection-box" class="box">
+                    <p>Input Type</p>
                     <p id="announce-type"></p>
                 </div>
                 <div id="examples-box" class="box">
+                    <p>Examples of Input</p>
                     <p id="examples"></p>
                 </div>
                 <div id="sentences-box" class="box">
+                    <p>Sentences (Strings Only)</p>
                     <p id="sentences1"></p>
                     <p id="sentences2"></p>
                     <p id="sentences3"></p>
                 </div>
                 <div id="operations-box" class="box">
+                    <p>A Math Operation (Numbers Only)</p>
                     <p id="operations"></p>
                 </div>
                 <div id="highlighted-box" class="box">
                     <p>Click the button to highlight currently active boxes</p>
                     <button name="btn-highlight" id="btn-highlight">Highlight</button>
                 </div>
-                <div id="comparison-box" class="box">
-                </div>
                 <div id="history-box" class="box">
+                    <p> Past terms entered </p>
+                    <p id="terms"></p>
+                </div>
+                <div id="random-box" class="box">
+                    <p>Random Input Generator!</p>
+                    <button id="btn-randstr">String</button>
+                    <button id="btn-randnum">Number</button>
                 </div>
             </div>
         </body>
@@ -41,6 +50,8 @@
         <script src="box_modules/examples-box.js"></script>
         <script src="box_modules/sentences-box.js"></script>
         <script src="box_modules/operations-box.js"></script>
+        <script src="box_modules/history-box.js"></script>
+        <script src="box_modules/random-box.js"></script>
     </html>
 
 

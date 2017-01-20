@@ -4,30 +4,58 @@ var highlight_box = (function() {
     var highlightbtn = document.getElementById('btn-highlight');
 
     //bind button click event
-    highlightbtn.addEventListener("click", highlight_boxes);
+    highlightbtn.addEventListener("click", highlightFunc);
 
-    function highlight_boxes() {
-        var rules = document.stylesheets[0].cssRules;
+    //function that highlights the elements
+    function highlightFunc() {
+        var els = document.getElementsByClassName('highlight');
 
-        var opacity;
-        var last_time = +new Date();
+        var opacity = 0;
+        var back_to_zero_flag = false;
+        
         var tick = function() {
 
+            if (opacity === 1 || opacity > 1) {
+                back_to_zero_flag = true;
+
+            }
+
+            if ( opacity <= 0 && back_to_zero_flag) {
+                return;
+            }
+
+            if (!back_to_zero_flag) {
+                opacity += 0.05;
+            }
+            else {
+                opacity -= 0.05;
+            }
+
+            for (var i = 0; i < els.length; i++) {
+                els[i].style["border-top"] = "6px solid rgba(0,255,0," + opacity + ")";
+                //els[i].style["border-bottom"] = "6px solid rgba(0,255,0," + opacity + ")";
+            }
+            
+            window.requestAnimationFrame(tick);
+
         }
+
+        tick();
+
     };
 
     // external function
     function mark(id, remove) {
-        var toMark = document.getElementById(id);
+        var to_mark = document.getElementById(id);
 
         if (remove === true) {
-            if ( toMark.classList.contains("highlight") ) {
-                toMark.classList.remove("highlight");
+            if ( to_mark.classList.contains("highlight") ) {
+                to_mark.classList.remove("highlight");
             }
         }
         else {
-            if ( !(toMark.classList.contains("highlight")) ) {
-                toMark.classList.add("highlight");
+            if ( !(to_mark.classList.contains("highlight")) ) {
+                to_mark.classList.add("highlight");
             }
         }
     };

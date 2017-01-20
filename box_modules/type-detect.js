@@ -9,6 +9,8 @@ var type_detect = (function() {
     //When onInput is emitted, check and then emit type
     function announce_type(input) {
 
+        highlight_box.mark("type-detection-box", false);
+
         if ( isNaN(Number(input)) )
         {
             boxText.innerHTML = "This is a String!";
@@ -20,8 +22,5 @@ var type_detect = (function() {
             events.emit("numberFound", Number(input));
         }
     }
-
-    //marked for highlighting always
-    highlight_box.mark("type-detection-box", false);
 
 })();

@@ -8,7 +8,10 @@
     width: 18em;
     height: 18em;
     vertical-align: top;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    overflow: scroll;
+    padding: 8px;
+    text-align: center;
 }
 
 .highlight {
